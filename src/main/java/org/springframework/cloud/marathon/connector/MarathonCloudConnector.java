@@ -36,7 +36,7 @@ public class MarathonCloudConnector extends AbstractCloudConnector<Task> {
 		String marathonHost = environment.getEnvValue("SPRING_CLOUD_MARATHON_HOST");
 		if (marathonHost == null) {
 			// Default value for mesos/playa
-			marathonHost = "http://10.141.141.10:8080";
+			marathonHost = "https://10.141.141.10:8080";
 		}
 		log.info("Using Marathon Host: " + marathonHost);
 		this.marathon = MarathonClient.getInstance(marathonHost);
